@@ -1,0 +1,16 @@
+{
+  "popularity": {"set": {}},
+  "knn": {"set": {"k": 3200}},
+  "svd": {"set": {"factors": 32, "reg": 0.5}},
+  "bpr": {"set": {"factors": 128, "reg": 0.003, "patience": 15, "epochs": 80}},
+  "content": {"set": {"lam": 0.5}},
+  "sasrec": {"set": {"max_len": 20, "hidden": 128, "blocks": 1, "dropout": 0.5}, "save": true},
+  "ncf": {"set": {"factors": 32, "mlp_factors": 32, "layers": [64, 32, 16], "reg": 0.003, "dropout": 0.2, "patience": 5, "epochs": 40}},
+  "als": {
+    "set": {"factors": 256, "reg": 0.1, "alpha": 40, "iterations": 15},
+    "variants": [
+      {"tag": "foldin", "on": "cold", "set": {"foldin": true}},
+      {"tag": "foldall", "on": "main", "set": {"foldin_all": true}}
+    ]
+  }
+}

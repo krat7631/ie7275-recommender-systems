@@ -1,0 +1,9 @@
+data/
+results/per_user/
+results/processed_coldstart/per_user/
+results/models/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.log
