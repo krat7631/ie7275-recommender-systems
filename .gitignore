@@ -1,6 +1,10 @@
 data/
-results/per_user/
-results/processed_coldstart/per_user/
+results/per_user/*
+!results/per_user/*_final.npz
+!results/per_user/*_foldall.npz
+results/processed_coldstart/per_user/*
+!results/processed_coldstart/per_user/*_final.npz
+!results/processed_coldstart/per_user/*_foldin.npz
 results/models/
 __pycache__/
 .pytest_cache/

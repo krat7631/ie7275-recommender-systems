@@ -38,7 +38,7 @@ RECSYS_DATA_DIR=data/processed_coldstart python -m recsys.run knn --set k=3200 -
 python docs/run_finals.py                          # every reported run (about 80 minutes on an Apple M5 laptop)
 python -m recsys.compare --final                   # the comparison table
 ```
-In the notebook, `RETRAIN = False` (the default) reads the saved results; set it to `True` to refit every final model.
+In the notebook, `RETRAIN = False` (the default) reads the saved results in `results/`, including the per-user ranks of the final runs, so once the data has been rebuilt (see above) it runs as it is. The demo cell refits ALS (about 13 minutes) because the saved model file is not included. Set `RETRAIN = True` to refit every final model.
 
 ## Layout
 - `recsys/`: the package. `preprocess` (raw data to splits), `coldstart` (new-user dataset), `data`, `metrics`, `harness` (the evaluation), `models/` (one file per model), `analysis` (confidence intervals and tests), `plots`, `demo`.
